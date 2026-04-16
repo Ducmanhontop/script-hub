@@ -1,80 +1,101 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Script Hub</title>
-  <style>
-    body {
-      background: #0f172a;
-      color: white;
-      font-family: monospace;
-      margin: 0;
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      padding: 20px;
-    }
-    .card {
-      background: #1e293b;
-      padding: 15px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-    button {
-      background: #7c3aed;
-      border: none;
-      padding: 10px;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    iframe {
-      width: 100%;
-      border-radius: 10px;
-    }
-    pre {
-      background: #020617;
-      padding: 10px;
-      border-radius: 10px;
-      overflow-x: auto;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Script Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  background: linear-gradient(135deg,#020617,#0f172a);
+  color:white;
+  font-family:'JetBrains Mono', monospace;
+}
+
+.container {
+  max-width:700px;
+  margin:auto;
+  padding:20px;
+}
+
+h1 {
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.card {
+  background:#1e293b;
+  padding:20px;
+  border-radius:16px;
+  margin-bottom:20px;
+  box-shadow:0 0 20px rgba(124,58,237,0.2);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 0 30px rgba(124,58,237,0.5);
+}
+
+iframe {
+  width:100%;
+  height:200px;
+  border-radius:10px;
+}
+
+button {
+  background:linear-gradient(90deg,#7c3aed,#06b6d4);
+  border:none;
+  padding:10px 15px;
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+pre {
+  background:#020617;
+  padding:10px;
+  border-radius:10px;
+  overflow-x:auto;
+  margin-top:10px;
+}
+</style>
 </head>
 
 <body>
+
 <div class="container">
 
-  <h1>🔥 Script Hub</h1>
+<h1>🔥 Script Hub</h1>
 
-  <div class="card">
-    <iframe height="200" src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+<div class="card">
+  <iframe src="LINK_VIDEO"></iframe>
 
-    <h2>Dead Rails Auto Farm</h2>
-    <p>Nhớ tham gia Discord!</p>
+  <h2>Auto Farm</h2>
 
-    <button onclick="copyScript()">📋 Copy Script</button>
+  <button onclick="copyScript()">📋 Copy Script</button>
 
-    <pre id="script">
-loadstring(game:HttpGet("https://raw.githubusercontent.com/yourlink/script.lua"))()
-    </pre>
+  <pre id="script1">
+loadstring(game:HttpGet("LINK_SCRIPT"))()
+  </pre>
 
-    <br>
-    <a href="https://discord.gg/yourlink">
-      <button>💬 Discord</button>
-    </a>
-
-  </div>
+</div>
 
 </div>
 
 <script>
-function copyScript() {
-  let text = document.getElementById("script").innerText;
+function copyScript(){
+  let text = document.getElementById("script1").innerText;
   navigator.clipboard.writeText(text);
-  alert("Đã copy script!");
+  alert("Đã copy!");
 }
 </script>
 
 </body>
 </html>
+<a href="https://discord.gg/link">
+  <button>💬 Discord</button>
+</a>
